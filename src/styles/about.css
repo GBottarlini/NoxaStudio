@@ -1,0 +1,46 @@
+.section-about {
+  background: #fafafa;
+}
+
+.about-layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .about-layout {
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}
+
+.about-left h2 {
+  margin-bottom: 1rem;
+}
+
+.about-left .section-text + .section-text {
+  margin-top: 0.75rem;
+}
+
+.about-right {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.about-item {
+  padding: 1.3rem 1.4rem;
+  border-radius: 1rem;
+  border: 1px solid #e3e3e3;
+  background: #ffffff;
+}
+
+.about-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.about-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}

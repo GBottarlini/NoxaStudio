@@ -1,0 +1,91 @@
+.hero {
+  padding: 7rem 0 5rem;
+  background: #ffffff;
+}
+
+.hero-inner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+/* Etiqueta arriba del título */
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #777;
+  margin-bottom: 1.5rem;
+}
+
+.hero-tag::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 1px;
+  background: #c7c7c7;
+}
+
+/* Título principal */
+.hero-title {
+  font-size: 3.5rem;
+  line-height: 1.05;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  font-weight: 700;
+}
+
+/* Subtítulo fino */
+.hero-sub {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+/* Texto principal */
+.hero-body {
+  max-width: 640px;
+  margin: 0 auto 2.25rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+/* CTA */
+.hero-cta {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.hero-note {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 0 3.5rem;
+  }
+
+  .hero-title {
+    font-size: 2.4rem;
+  }
+
+  .hero-body {
+    font-size: 0.95rem;
+  }
+}

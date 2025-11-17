@@ -1,0 +1,90 @@
+.services-layout {
+  display: grid;
+  gap: 1.75rem;
+}
+
+/* Desktop: 2 columnas, izquierda destacada */
+@media (min-width: 900px) {
+  .services-layout {
+    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .service-column {
+    display: grid;
+    gap: 1.25rem;
+  }
+}
+
+.service-card {
+  position: relative;
+  padding: 2.1rem 2rem 2rem;
+  border-radius: 1.25rem;
+}
+
+/* Card destacada: fondo oscuro, texto claro */
+/* usamos un selector más específico para que no lo pise .card de base.css */
+.service-card.service-featured {
+  background: #111111;
+  color: #f5f5f5;
+  border-color: #111111;
+}
+
+
+.service-featured .service-title,
+.service-featured .service-text,
+.service-featured .service-list,
+.service-featured .service-kicker {
+  color: #f5f5f5;
+}
+
+.service-featured .service-label {
+  color: #b3b3b3;
+}
+
+/* Zona superior de cada card */
+.service-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+/* Etiqueta CORE / Instagram / Identidad */
+.service-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #999;
+}
+
+/* “Web Design & Development” arriba del título */
+.service-kicker {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #555;
+}
+
+/* Título */
+.service-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.6rem;
+}
+
+/* Texto */
+.service-text {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.7;
+  margin-bottom: 0.9rem;
+}
+
+/* Lista */
+.service-list {
+  margin-top: 0.25rem;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+}

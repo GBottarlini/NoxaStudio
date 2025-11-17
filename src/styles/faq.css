@@ -1,0 +1,34 @@
+.section-faq {
+  background: #ffffff;
+}
+
+/* Grid 2 columnas */
+.faq-grid {
+  display: grid;
+  gap: 1.75rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.faq-item {
+  padding: 1.5rem 1.2rem 1.2rem;
+  border-radius: 1.25rem;
+  border: 1px solid #e2e2e2;
+  background: #fcfcfc;
+}
+
+.faq-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.faq-item p {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+}
