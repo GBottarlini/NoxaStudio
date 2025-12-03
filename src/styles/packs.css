@@ -16,7 +16,6 @@
   }
 }
 
-/* Fila de packs Instagram */
 .packs-row {
   display: grid;
   gap: 1.5rem;
@@ -31,17 +30,28 @@
 .pack-card {
   position: relative;
   padding: 2.1rem 2rem 2rem;
-  border-radius: 1.25rem;
+  border-radius: 1.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, #10121d, #0e111a);
+  color: #e9ebf3;
+  box-shadow: 0 16px 50px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
+  overflow: hidden;
 }
 
-/* Pack destacado */
-/* mismo truco: más específico */
+.pack-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.4);
+}
+
 .pack-card.pack-featured {
-  background: #111111;
+  background: linear-gradient(135deg, #0f111a, #121422);
   color: #f5f5f5;
-  border-color: #111111;
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, 0.38);
 }
-
 
 .pack-featured .pack-title,
 .pack-featured .pack-text,
@@ -51,12 +61,11 @@
 }
 
 .pack-featured .pack-pill {
-  background: #ffffff10;
+  background: rgba(255, 255, 255, 0.08);
   color: #f5f5f5;
-  border-color: #f5f5f533;
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Top row dentro de cada pack */
 .pack-top {
   display: flex;
   align-items: center;
@@ -64,51 +73,52 @@
   margin-bottom: 0.75rem;
 }
 
-/* Pill de categoría (Web, Instagram, Identidad) */
 .pack-pill {
   display: inline-flex;
   align-items: center;
   padding: 0.2rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid #e1e1e1;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
+  color: #e9ebf3;
 }
 
-/* Nombre corto del pack */
 .pack-name-small {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 0.16em;
-  color: #777;
+  color: #c7cbdb;
 }
 
-/* Título + texto */
 .pack-title {
   font-size: 1.2rem;
   margin-bottom: 0.6rem;
+  color: #f6f6fb;
 }
 
 .pack-text {
-  font-size: 0.95rem;
-  color: #555;
+  font-size: 0.98rem;
+  color: #c7cbdb;
   line-height: 1.7;
   margin-bottom: 0.9rem;
 }
 
-/* Lista */
 .pack-list {
   margin-top: 0.25rem;
   padding-left: 1.1rem;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.92rem;
+  color: #b4b8c6;
   line-height: 1.6;
 }
 
-/* Tagline del pack destacado */
+.pack-list li {
+  margin-bottom: 0.3rem;
+}
+
 .pack-tagline {
   margin-top: 1rem;
-  font-size: 0.85rem;
-  color: #ccc;
+  font-size: 0.9rem;
+  color: #5f6370;
 }

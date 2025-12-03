@@ -5,7 +5,9 @@ export default function Footer() {
     <footer className="noxa-footer">
       <div className="noxa-container footer-inner">
         <div className="footer-left">
-          <p className="footer-brand">© NOXA Studio · New Order eXperience Agency</p>
+          <p className="footer-brand">
+            NOXA Studio — New Order eXperience Agency
+          </p>
         </div>
 
         <div className="footer-right">

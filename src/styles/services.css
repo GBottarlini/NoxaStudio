@@ -1,90 +1,102 @@
-.services-layout {
-  display: grid;
-  gap: 1.75rem;
+#services {
+  background: #0c0d14;
+  color: #f4f4f8;
+  border-top: none;
 }
 
-/* Desktop: 2 columnas, izquierda destacada */
-@media (min-width: 900px) {
-  .services-layout {
-    grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr);
-    align-items: stretch;
-  }
+#services .section-header h2 {
+  font-size: clamp(2.2rem, 3.2vw, 3rem);
+  margin-bottom: 0.4rem;
+}
 
-  .service-column {
-    display: grid;
-    gap: 1.25rem;
-  }
+#services .section-sub {
+  color: #b4b8c6;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 0.75rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .service-card {
+  background: linear-gradient(180deg, #10121d, #0e111a);
+  padding: 2.2rem 1.9rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
   position: relative;
-  padding: 2.1rem 2rem 2rem;
-  border-radius: 1.25rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
-/* Card destacada: fondo oscuro, texto claro */
-/* usamos un selector más específico para que no lo pise .card de base.css */
-.service-card.service-featured {
-  background: #111111;
-  color: #f5f5f5;
-  border-color: #111111;
+.service-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, rgba(148, 245, 228, 0.14), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-
-.service-featured .service-title,
-.service-featured .service-text,
-.service-featured .service-list,
-.service-featured .service-kicker {
-  color: #f5f5f5;
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.32);
 }
 
-.service-featured .service-label {
-  color: #b3b3b3;
+.service-card:hover::after {
+  opacity: 1;
 }
 
-/* Zona superior de cada card */
-.service-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 0.75rem;
+.service-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 0.7rem;
 }
 
-/* Etiqueta CORE / Instagram / Identidad */
-.service-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: #999;
+.service-icon {
+  margin-bottom: 0.4rem;
+  color: #9ef5e2;
 }
 
-/* “Web Design & Development” arriba del título */
-.service-kicker {
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  color: #555;
+.service-card h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+  color: #f4f4f8;
 }
 
-/* Título */
-.service-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.6rem;
-}
-
-/* Texto */
-.service-text {
-  font-size: 0.95rem;
-  color: #555;
+.service-description {
+  color: #c7cbdb;
   line-height: 1.7;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.4rem;
 }
 
-/* Lista */
-.service-list {
-  margin-top: 0.25rem;
-  padding-left: 1.1rem;
-  font-size: 0.9rem;
-  color: #666;
-  line-height: 1.6;
+.service-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: #f4f4f8;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.service-cta span {
+  transition: transform 0.2s ease;
+  display: inline-block;
+}
+
+.service-card:hover .service-cta span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 768px) {
+  #services {
+    padding-top: 4.5rem;
+  }
 }

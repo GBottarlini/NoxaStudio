@@ -1,5 +1,6 @@
 .section-faq {
-  background: #ffffff;
+  background: transparent;
+  color: #e9ebf3;
 }
 
 /* Grid 2 columnas */
@@ -18,17 +19,28 @@
 .faq-item {
   padding: 1.5rem 1.2rem 1.2rem;
   border-radius: 1.25rem;
-  border: 1px solid #e2e2e2;
-  background: #fcfcfc;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, #10121d, #0e111a);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+  transition: transform 0.2s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease, background 0.25s ease;
 }
 
 .faq-item h3 {
   font-size: 1rem;
   margin-bottom: 0.35rem;
+  color: #f6f6fb;
 }
 
 .faq-item p {
   font-size: 0.9rem;
-  color: #555;
+  color: #c7cbdb;
   line-height: 1.6;
+}
+
+.faq-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38);
+  background: linear-gradient(180deg, #121629, #0f131f);
 }

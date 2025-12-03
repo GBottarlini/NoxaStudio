@@ -6,7 +6,7 @@ export default function Packs() {
       <div className="noxa-container">
         <div className="section-header">
           <span className="section-tag">Packs</span>
-          <h2>Packs pensados para arrancar bien desde el día uno.</h2>
+          <h2>Packs pensados para lanzar sin adivinar.</h2>
           <p className="section-sub">
             Combinamos web, Instagram e identidad visual en paquetes claros para
             que sepas exactamente qué te llevás.
@@ -14,15 +14,17 @@ export default function Packs() {
         </div>
 
         {/* Web + Branding */}
-        <div className="packs-layout">
+        <div className="packs-layout ">
           {/* Pack destacado */}
-          <article className="card pack-card pack-featured">
+          <article className="service-card pack-featured">
             <div className="pack-top">
               <span className="pack-pill">Web</span>
               <span className="pack-name-small">WEB 2 · Web Pro</span>
             </div>
 
-            <h3 className="pack-title">Sitio completo para marcas en crecimiento.</h3>
+            <h3 className="pack-title">
+              Sitio completo para marcas en crecimiento.
+            </h3>
 
             <p className="pack-text">
               Ideal si ya tenés algo de recorrido y necesitás una web más
@@ -35,12 +37,14 @@ export default function Packs() {
               <li>Sección portfolio o productos + formulario.</li>
             </ul>
 
-            <div className="pack-tagline">Recomendado si ya estás vendiendo y querés escalar.</div>
+            <div className="pack-tagline">
+              Recomendado si ya estás vendiendo y querés escalar.
+            </div>
           </article>
 
           {/* Columna lateral: Landing + Branding */}
           <div className="pack-column">
-            <article className="card pack-card">
+            <article className="service-card">
               <div className="pack-top">
                 <span className="pack-pill">Web</span>
                 <span className="pack-name-small">WEB 1 · Landing Essential</span>
@@ -56,7 +60,7 @@ export default function Packs() {
               </ul>
             </article>
 
-            <article className="card pack-card">
+            <article className="service-card">
               <div className="pack-top">
                 <span className="pack-pill">Identidad</span>
                 <span className="pack-name-small">Branding Lite</span>
@@ -77,10 +81,12 @@ export default function Packs() {
 
         {/* Packs de Instagram */}
         <div className="packs-row">
-          <article className="card pack-card">
+          <article className="service-card">
             <div className="pack-top">
               <span className="pack-pill">Instagram</span>
-              <span className="pack-name-small">IG 1 · Optimización estética</span>
+              <span className="pack-name-small">
+                IG 1 · Optimización estética
+              </span>
             </div>
             <h3 className="pack-title">Orden visual para tu perfil actual.</h3>
             <p className="pack-text">
@@ -93,14 +99,14 @@ export default function Packs() {
             </ul>
           </article>
 
-          <article className="card pack-card">
+          <article className="service-card">
             <div className="pack-top">
               <span className="pack-pill">Instagram</span>
               <span className="pack-name-small">IG 2 · Rebrand completo</span>
             </div>
             <h3 className="pack-title">Relanzar tu Instagram desde cero.</h3>
             <p className="pack-text">
-              Pensado para cuando querés “borrar y arrancar bien”.
+              Pensado para cuando querés ordenar todo y arrancar bien.
             </p>
             <ul className="pack-list">
               <li>Todo lo de IG 1.</li>

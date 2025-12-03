@@ -1,75 +1,73 @@
 import "../styles/services.css";
+import { useRef } from "react";
+import useIntersectionObserver from "../hooks/useIntersectionObserver.js";
+import CodeIcon from "./CodeIcon.jsx";
+import PlusIcon from "./PlusIcon.jsx";
+import TargetIcon from "./TargetIcon.jsx";
+
+const servicesData = [
+  {
+    icon: <CodeIcon />,
+    title: "Desarrollo Web",
+    description:
+      "Landing pages o sitios completos diseñados con estructura clara, SEO on-page y performance rápida.",
+    link: "#contact",
+  },
+  {
+    icon: <PlusIcon />,
+    title: "Gestión de Redes",
+    description:
+      "Sistema de contenido para Instagram: calendario, copys, plantillas y comunidad con criterio de marca.",
+    link: "#contact",
+  },
+  {
+    icon: <TargetIcon />,
+    title: "Branding y Diseño",
+    description:
+      "Identidad flexible: logo, paleta, tipografías y guías de uso para que todo se vea consistente.",
+    link: "#contact",
+  },
+];
 
 export default function Services() {
+  const sectionRef = useRef(null);
+  const isVisible = useIntersectionObserver(sectionRef, { threshold: 0.2 });
+
   return (
-    <section className="section" id="services">
+    <section className="section" id="services" ref={sectionRef}>
       <div className="noxa-container">
-        <div className="section-header">
+        <div
+          className={`section-header animate-on-scroll ${
+            isVisible ? "is-visible" : ""
+          }`}
+        >
           <span className="section-tag">Servicios</span>
-          <h2>Lo que hacemos en NOXA Studio</h2>
+          <h2>Lo que hacemos_</h2>
           <p className="section-sub">
-            Web como base, Instagram para presencia diaria e identidad visual
-            para que todo se vea parte de la misma marca.
+            Unimos web, Instagram e identidad para que tu presencia digital sea
+            coherente de punta a punta.
           </p>
         </div>
 
-        <div className="services-layout">
-          {/* CARD DESTACADA */}
-          <article className="card service-card service-featured">
-            <div className="service-top">
-              <span className="service-label">Core</span>
-              <span className="service-kicker">Web Design &amp; Development</span>
-            </div>
-
-            <h3 className="service-title">Sitios web minimalistas y profesionales.</h3>
-
-            <p className="service-text">
-              Tu sitio es tu base. Diseñamos y desarrollamos webs limpias,
-              rápidas y claras para que se entienda quién sos, qué hacés y cómo
-              contactarte.
-            </p>
-
-            <ul className="service-list">
-              <li>Landing pages y webs institucionales.</li>
-              <li>Mobile first, performance y claridad.</li>
-              <li>Integraciones simples y formularios.</li>
-            </ul>
-          </article>
-
-          {/* COLUMNA DERECHA: 2 CARDS */}
-          <div className="service-column">
-            <article className="card service-card">
-              <div className="service-top">
-                <span className="service-label">Instagram</span>
+        <div className="services-grid">
+          {servicesData.map((service, index) => (
+            <article
+              key={service.title}
+              className={`service-card animate-on-scroll ${
+                isVisible ? "is-visible" : ""
+              }`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              <div className="service-content">
+                <div className="service-icon">{service.icon}</div>
+                <h3>{service.title}</h3>
+                <p className="service-description">{service.description}</p>
+                <a href={service.link} className="service-cta">
+                  Hablemos <span>&rarr;</span>
+                </a>
               </div>
-              <h3 className="service-title">Instagram Optimization</h3>
-              <p className="service-text">
-                Rediseñamos tu perfil para que se vea prolijo, coherente y
-                alineado a tu marca, sin perder tu estilo.
-              </p>
-              <ul className="service-list">
-                <li>Feed ordenado y consistente.</li>
-                <li>Plantillas para posts y stories.</li>
-                <li>Bio, highlights e imagen de perfil alineadas.</li>
-              </ul>
             </article>
-
-            <article className="card service-card">
-              <div className="service-top">
-                <span className="service-label">Identidad</span>
-              </div>
-              <h3 className="service-title">Branding Lite</h3>
-              <p className="service-text">
-                Logo, paleta y tipografías mínimas para que todo lo que hagas
-                se sienta parte de la misma marca.
-              </p>
-              <ul className="service-list">
-                <li>Logo principal y variantes básicas.</li>
-                <li>Paleta y tipografías definidas.</li>
-                <li>Piezas iniciales listas para usar.</li>
-              </ul>
-            </article>
-          </div>
+          ))}
         </div>
       </div>
     </section>

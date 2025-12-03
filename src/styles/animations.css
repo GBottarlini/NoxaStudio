@@ -1,0 +1,17 @@
+/* Clase base para elementos que se animarán al ser visibles */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Clase que se añade con JS cuando el elemento entra en pantalla */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+    transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition-delay: 50ms;
+}

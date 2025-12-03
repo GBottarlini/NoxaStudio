@@ -8,8 +8,8 @@ export default function Process() {
           <span className="section-tag">Proceso</span>
           <h2>Cómo trabajamos en NOXA Studio.</h2>
           <p className="section-sub">
-            Un flujo simple y claro para que sepas en todo momento en qué
-            estamos y cuál es el siguiente paso.
+            Un flujo simple para que sepas en todo momento en qué estamos y cuál
+            es el siguiente paso.
           </p>
         </div>
 
@@ -28,8 +28,8 @@ export default function Process() {
               <span className="step-index">02</span>
               <h3>Propuesta &amp; estructura</h3>
               <p>
-                Definimos qué vamos a hacer, qué incluye cada pack y cómo se
-                va a ver la estructura.
+                Definimos qué vamos a hacer, qué incluye cada pack y cómo se va
+                a ver la estructura.
               </p>
             </div>
             <div className="process-step">

@@ -3,31 +3,31 @@ import "../styles/portfolio.css";
 const projects = [
   {
     tag: "Web",
-    name: "Estudio jurídico · Landing minimal",
+    name: "Estudio jurídico — Landing minimal",
     type: "Web institucional",
     year: "2024",
   },
   {
     tag: "Web + IG",
-    name: "Consultora contable · Presencia completa",
+    name: "Consultora contable — Presencia completa",
     type: "Web + Instagram",
     year: "2024",
   },
   {
     tag: "Instagram",
-    name: "Tienda de ropa · Rebrand visual",
+    name: "Tienda de ropa — Rebrand visual",
     type: "Instagram optimization",
     year: "2024",
   },
   {
     tag: "Branding",
-    name: "Marca personal · Identidad mínima",
+    name: "Marca personal — Identidad mínima",
     type: "Branding Lite",
     year: "2023",
   },
   {
     tag: "Web",
-    name: "Negocio de servicios · Landing clara",
+    name: "Negocio de servicios — Landing clara",
     type: "Landing Essential",
     year: "2023",
   },
@@ -53,8 +53,8 @@ export default function Portfolio() {
         </div>
 
         <div className="portfolio-grid">
-          {projects.map((project, index) => (
-            <article key={index} className="card portfolio-card">
+          {projects.map((project) => (
+            <article key={project.name} className="card portfolio-card">
               <div className="portfolio-mockup" />
 
               <div className="portfolio-meta">

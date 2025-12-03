@@ -18,6 +18,9 @@ export default function NavBar() {
             <a href="#packs">Packs</a>
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contacto</a>
+            <a href="#contact" className="nav-cta">
+              Iniciar proyecto
+            </a>
           </nav>
         </div>
       </div>

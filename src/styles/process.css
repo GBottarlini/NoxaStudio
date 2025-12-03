@@ -1,9 +1,33 @@
 .section-process {
-  background: #ffffff;
+  background: radial-gradient(circle at 12% 10%, #141726 0%, #0a0b12 55%);
+  color: #ffffff;
+  border-top: none;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Línea que une los steps (modo timeline horizontal) */
+.section-process::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 85% 20%, #9ef5e220 0%, transparent 35%),
+    radial-gradient(circle at 20% 90%, #7de1b525 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.section-process .section-header h2,
+.section-process .section-sub,
+.section-process .section-tag {
+  color: #e9ebf3;
+}
+
+.section-process .section-sub {
+  color: #c7cbdb;
+}
+
 .process-track {
+  position: relative;
+  z-index: 1;
   position: relative;
   margin-top: 2.5rem;
 }
@@ -14,13 +38,13 @@
   left: 0;
   right: 0;
   height: 1px;
-  background: #e1e1e1;
+  background: linear-gradient(90deg, #1e2230, #2b3244);
   z-index: 0;
 }
 
 .process-grid {
   display: grid;
-  gap: 1.75rem;
+  gap: 1.4rem;
   position: relative;
   z-index: 1;
 }
@@ -32,39 +56,48 @@
 }
 
 .process-step {
-  background: #fcfcfc;
-  border-radius: 1.25rem;
-  border: 1px solid #e3e3e3;
-  padding: 1.7rem 1.5rem 1.6rem;
+  background: #101321;
+  border-radius: 0.9rem;
+  border: 1px solid #1f2434;
+  padding: 1.6rem 1.4rem 1.5rem;
+  transition: background-color 0.25s ease, border-color 0.25s ease,
+    transform 0.15s ease;
+}
+
+.process-step:hover {
+  background-color: #13172a;
+  border-color: #293149;
+  transform: translateY(-2px);
 }
 
 .step-index {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 42px;
+  height: 42px;
   border-radius: 999px;
-  background: #111111;
-  color: #ffffff;
+  background: linear-gradient(135deg, #9ef5e2, #7ae0b8);
+  color: #0c0c12;
   font-size: 0.8rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
   margin-bottom: 0.9rem;
+  font-weight: 700;
 }
 
 .process-step h3 {
-  font-size: 1rem;
+  font-size: 1.05rem;
+  color: #f6f6fb;
   margin-bottom: 0.4rem;
 }
 
 .process-step p {
-  font-size: 0.9rem;
-  color: #555;
+  font-size: 0.95rem;
+  color: #c4c8d5;
   line-height: 1.6;
 }
 
-/* Mobile: quitamos la línea horizontal */
 @media (max-width: 899px) {
   .process-line {
     display: none;

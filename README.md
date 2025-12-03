@@ -1,9 +1,9 @@
 # NOXA Studio Landing Page
 
 <div align="center">
-  <img src="src/assets/logo.svg" alt="NOXA Studio Logo" width="150">
+  <img src="src/assets/logo.svg" alt="NOXA Studio Logo" width="150" />
   <h1>New Order eXperience Agency</h1>
-  <p>Una web elegante, funcional y ordenada que representa el enfoque minimalista y moderno de NOXA Studio.</p>
+  <p>Landing responsiva, diseno editorial y foco en velocidad para web + Instagram + branding.</p>
 </div>
 
 <div align="center">
@@ -43,6 +43,7 @@ Este proyecto fue construido utilizando tecnologías modernas para asegurar un d
 
 - **React 18:** Para una interfaz de usuario declarativa y eficiente.
 - **Vite:** Build tool ultra-rápida para un desarrollo local instantáneo.
+- **Hook** `useIntersectionObserver` para animaciones on-scroll
 - **CSS Modular:** Estilos encapsulados por componente para evitar colisiones y mejorar la mantenibilidad.
 - **Arquitectura Limpia:** Basada en componentes reutilizables y secciones bien definidas.
 
@@ -79,27 +80,27 @@ Sigue estos pasos para levantar el proyecto en tu entorno local.
 <summary>Haz clic para ver la estructura de carpetas</summary>
 
 ```
-/src
- ├── assets/         # Imágenes, logos y otros recursos estáticos
- ├── components/     # Componentes reutilizables (NavBar, Footer)
- ├── sections/       # Componentes de sección principal (Hero, About)
- ├── styles/         # Hojas de estilo CSS modulares
- ├── App.jsx         # Componente raíz que ensambla las secciones
- └── main.jsx        # Punto de entrada de la aplicación
+src/
+  assets/          # logos, imagenes, decoraciones
+  components/      # piezas reutilizables (NavBar, Footer)
+  hooks/           # hooks personalizados (intersection observer)
+  sections/        # secciones principales (Hero, About, Packs, etc.)
+  styles/          # CSS por seccion, base y animaciones
+  App.jsx          # ensambla las secciones
+  main.jsx         # punto de entrada y estilos globales
+index.html
 ```
 </details>
 
 ## 🧩 Secciones del Sitio
-
-- **Hero:** Mensaje principal y llamadas a la acción (CTAs).
-- **About:** Qué es NOXA Studio y su filosofía.
-- **Servicios:** Detalle de los servicios ofrecidos (Diseño web, Instagram, Branding).
-- **Packs:** Paquetes predefinidos para emprendedores.
-- **Proceso:** Descripción de la metodología de trabajo.
-- **Portfolio:** Proyectos y trabajos destacados.
-- **FAQ:** Preguntas frecuentes para resolver dudas comunes.
-- **Contacto:** Formulario y datos de contacto.
-- **Footer:** Navegación secundaria, enlaces a redes y marca.
+- Hero: propuesta renovada con panel de valor, badges y CTA
+- About: pilares del estudio y enfoque minimalista
+- Servicios y Packs: ofertas, tarifas y entregables
+- Proceso: pasos y tiempos
+- Portfolio: trabajos destacados
+- FAQ: respuestas rapidas
+- Contacto: formulario escalonado con animaciones y datos directos
+- Footer: enlaces y redes
 
 ## 📬 Contacto
 

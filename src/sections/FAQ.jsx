@@ -34,12 +34,14 @@ export default function FAQ() {
         <div className="section-header">
           <span className="section-tag">FAQ</span>
           <h2>Preguntas frecuentes.</h2>
-          <p className="section-sub">Respuestas rápidas sobre cómo trabajamos.</p>
+          <p className="section-sub">
+            Respuestas rápidas sobre cómo trabajamos.
+          </p>
         </div>
 
         <div className="faq-grid">
-          {faqs.map((item, i) => (
-            <div key={i} className="faq-item">
+          {faqs.map((item) => (
+            <div key={item.q} className="faq-item">
               <h3>{item.q}</h3>
               <p>{item.a}</p>
             </div>

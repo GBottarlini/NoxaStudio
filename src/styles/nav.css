@@ -2,13 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background: #ffffffee;
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid #eeeeee;
+  background: rgba(10, 11, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
 }
 
 .nav-inner {
-  height: 100px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,19 +18,26 @@
 .nav-logo {
   display: flex;
   align-items: center;
+  gap: 0.55rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 14px;
+  background: linear-gradient(160deg, rgba(148, 245, 228, 0.08), transparent);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
 }
 
 .nav-logo-img {
-  height: 96px;
+  height: 64px;
   width: auto;
   display: block;
+  filter: drop-shadow(0 6px 18px rgba(148, 245, 228, 0.28));
 }
 
 /* LINKS */
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 1.75rem;
+  gap: 1.35rem;
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -37,9 +45,50 @@
 
 .nav-links a {
   text-decoration: none;
-  color: #555555;
+  color: #e9ebf3;
+  font-weight: 600;
 }
 
 .nav-links a:hover {
-  color: #111111;
+  color: #94f5e4;
+}
+
+.nav-cta {
+  border: 1px solid rgba(148, 245, 228, 0.45);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  color: #e9ebf3;
+  background: rgba(148, 245, 228, 0.12);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.18);
+  transition: transform 0.15s ease, box-shadow 0.2s ease, background 0.2s ease,
+    color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-cta:hover {
+  background: rgba(148, 245, 228, 0.2);
+  color: #e9ebf3;
+  border-color: rgba(148, 245, 228, 0.7);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.32);
+}
+
+@media (max-width: 880px) {
+  .nav-inner {
+    height: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+    width: 100%;
+  }
+
+  .nav-cta {
+    width: 100%;
+    text-align: center;
+  }
 }
